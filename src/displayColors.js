@@ -26,7 +26,7 @@ export function onclickDelete(elemImage) {
     divColors.innerHTML = "";
     var imageFound = images.find(function (anElementOfImagesArray) {
         return anElementOfImagesArray.url === elemImage.getAttribute("src");
-    })
+    });
     // remove l'image de l'affichage 
     var imageFoundKey = images.indexOf(imageFound);
     // Ènlever un element de la pile du tableau

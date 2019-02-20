@@ -20,4 +20,4 @@ export const getNamespace = () => {
  */
 export const getLang = () => {
     return lang;
-}
+};

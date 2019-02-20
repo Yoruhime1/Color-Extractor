@@ -56,7 +56,7 @@ export function onClickImage(galleryImage) {
     imgPreview.style.backgroundImage = galleryImage.style.backgroundImage;
     imgPreview.style.minHeight = "22em";
     imgPreview.style.backgroundRepeat = "no-repeat";
-    imgPreview.style.backgroundImage = "url(" + galleryImage.getAttribute("src") + ")"
+    imgPreview.style.backgroundImage = "url(" + galleryImage.getAttribute("src") + ")";
     imgPreview.style.backgroundPosition = "center";
     imgPreview.style.backgroundSize = "contain";
     var url = galleryImage.getAttribute("src");
@@ -97,6 +97,6 @@ export function onClickImage(galleryImage) {
         }
     }
             delBtn.addEventListener("click", function () {
-                onclickDelete(galleryImage)
+                onclickDelete(galleryImage);
             });
 }

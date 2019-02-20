@@ -28,17 +28,17 @@ export const displayUpload = () => {
         inputSubmit.style.margin = "1em 0";
         uploadBtn.appendChild(txt);
         upload.appendChild(uploadBtn);
-        uploadBtn.setAttribute("class", "col-sm-3 col-md-6 btn")
+        uploadBtn.setAttribute("class", "col-sm-3 col-md-6 btn");
         uploadBtn.setAttribute("style", "font-family: 'Rajdhani', sans-serif; color: white; background-color: #DB171C");
         form.addEventListener("submit", function (event) {
-            onSubmitForm(event, this)
-        })
+            onSubmitForm(event, this);
+        });
         uploadBtn.addEventListener("click", function () {
             file.click();
         });
         file.addEventListener("change", function (event) {
             // console.log(file.files[0]);
-            onChangeFile(event)
+            onChangeFile(event);
         });
     } else {
         textInElement("h4", "Gallery is full", upload);
@@ -59,7 +59,7 @@ export const displayUpload = () => {
         xhr.onload = function (event) {
             var reader = new FileReader;
             reader.readAsDataURL(file.files[0]);
-            reader.onerror = function (event) {}
+            reader.onerror = function (event) {};
             reader.onload = function (event) {
                 console.log(reader.result);
                 var colorObject = JSON.parse(xhr.responseText);
@@ -77,12 +77,12 @@ export const displayUpload = () => {
                 gallery.lastChild.firstChild.click();
                 localStorage.setItem(getNamespace(), JSON.stringify(getImages()));
                 return;
-            }
+            };
         };
         xhr.setRequestHeader(
             "Authorization", "Basic YWNjXzk4MDQzYmIwOGFhMTUwNzo3MjUxOGYxNmI3MDBiMWM1Njk1ZTNhNTA3OTJjMzA1ZA==");
         var body = new FormData;
-        body.append("image", file.files[0])
+        body.append("image", file.files[0]);
         xhr.send(body);
     }
 

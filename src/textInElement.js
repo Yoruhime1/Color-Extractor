@@ -14,7 +14,7 @@ export function textInElement(tagName, text, parent) {
         element.appendChild(document.createTextNode(text));
     }
     if (parent instanceof HTMLElement) {
-        parent.appendChild(element)
+        parent.appendChild(element);
     }
     return element;
 }

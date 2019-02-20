@@ -1,24 +1,23 @@
-import $ from 'jquery';
+import $ from "jquery";
 
 const menuItems = [];
 
 export const displayMenuItems = () => {
-        const menu = $(`#menu`);
-        $(`<a>`).text(`Color extractor`).attr({
-            class: `navbar-brand`,
-            href: ``
-        }).insertBefore($(`button.navbar-toggler`));
+        const menu = $("#menu");
+        $("<a>").text("Color extractor").attr({
+            class: "navbar-brand",
+            href: ""
+        }).insertBefore($("button.navbar-toggler"));
 
-        menuItems.forEach(value => menu.append(
-                    $(`<li>`).attr(`class`, `nav-item text-center`).append(
-                        $(`<a>`).attr({
+        menuItems.forEach(value) => { menu.append(
+                    $("<li>").attr("class", "nav-item text-center").append(
+                        $("<a>").attr({
                             href: value.url,
-                            class: `nav-link`,
+                            class: "nav-link",
                             id: value.id
                         }).text(value.name)
                     )
-                ));
-            }
+                    )};
             
 /**
  * Description de la fonction
@@ -32,9 +31,9 @@ const pushItem = (itemName, itemUrl, itemID) => {
         url: itemUrl,
         id: itemID,
     });
-}
+};
 export default pushItem;
 
-pushItem(`Home`, `./`, `itemHome`);
-pushItem(`Gallery`, `#gallery`, `itemGallery`);
-pushItem(`Mail`, `#`, `itemMail`);
+pushItem("Home", "./", "itemHome");
+pushItem("Gallery", "#gallery", "itemGallery");
+pushItem("Mail", "#", "itemMail");

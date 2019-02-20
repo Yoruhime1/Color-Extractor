@@ -20,7 +20,7 @@ export function getImages() {
 export function addImage(imageName, imageColors, imageUrl, imageAlt, imageExtension) {
     var existingImage = images.find(function (image) {
         return image.url === imageUrl;
-    })
+    });
     if (!existingImage) {
         images.push({
             name: imageName,
